@@ -51,17 +51,23 @@ def get_list_within_section(document: Document, header: str) -> list[str]:
     Returns:
         list[str]: A list of items within the given section
     """
-
     is_within_section = False
+    all_items = []
 
     for node in document.children:
         if type(node) is Heading:
-            if node.children[0].children == header:
+            # Check if this is our target section or a subsection of it
+            heading_text = node.children[0].children
+            if heading_text.lower() == header.lower():
                 is_within_section = True
-            else:
+            elif node.level <= 2 and is_within_section:  # End section at next h1 or h2
                 is_within_section = False
+        
         if type(node) is List and is_within_section:
-            return [item.children[0].children[0].children for item in node.children]
+            items = [item.children[0].children[0].children for item in node.children]
+            all_items.extend(items)
+
+    return all_items if all_items else None
 
 
 def get_ingredients(document: Document) -> list[str]:
@@ -73,9 +79,15 @@ def get_ingredients(document: Document) -> list[str]:
     Returns:
         list[str]: A list of ingredients from the document
     """
-
-    return get_list_within_section(document, "Ingredients")
-
+    # Try to get all ingredients, including those in subsections
+    ingredients = get_list_within_section(document, "Ingredients")
+    if not ingredients:
+        # If no ingredients found, check for common variations
+        for variant in ["Ingredient", "ingredients", "INGREDIENTS"]:
+            ingredients = get_list_within_section(document, variant)
+            if ingredients:
+                break
+    return ingredients
 
 def get_instructions(document: Document) -> list[str]:
     """Returns the list of instructions from the recipe document

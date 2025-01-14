@@ -1,6 +1,6 @@
 # Contributing to the compiler
 
-Instructions for contributing a recipe can be found [here](https://microsoft.github.io/DevCookbook/contribute/).
+Instructions for contributing a recipe can be found [here](https://microsoft.github.io/OpenHardwareCookbook/contribute/).
 
 ## How to clone and set up the repository
 
@@ -9,7 +9,7 @@ Please make a [fork](https://docs.github.com/en/github/getting-started-with-gith
 Clone your fork with `git clone`
 
 ``` bash
-git clone https://github.com/<YOUR-GITHUB-USERNAME>/DevCookbook
+git clone https://github.com/<YOUR-GITHUB-USERNAME>/OpenHardwareCookbook
 ```
 
 ### Linux
@@ -17,7 +17,7 @@ git clone https://github.com/<YOUR-GITHUB-USERNAME>/DevCookbook
 Change directory into the project:
 
 ``` bash 
-cd DevCookbook
+cd OpenHardwareCookbook
 ```
 
 Create a virtual environment for installing packages:
@@ -43,7 +43,7 @@ pip install -r requirements.txt
 Change directory into the project:
 
 ``` powershell
-cd DevCookbook
+cd OpenHardwareCookbook
 ```
 
 Create a virtual environment for installing packages:
@@ -61,7 +61,7 @@ Activate the virtual environment:
 > Note, you may run into this error
 >
 > ``` powershell
-> .\.venv\Scripts\Activate.ps1 : File C:\Users\<username>\devcookbook\.venv\Scripts\Activate.ps1 cannot be loaded because running scripts is disabled on this system.
+> .\.venv\Scripts\Activate.ps1 : File C:\Users\<username>\OpenHardwareCookbook\.venv\Scripts\Activate.ps1 cannot be loaded because running scripts is disabled on this system.
 > For more information, see about_Execution_Policies at https:/go.microsoft.com/fwlink/?LinkID=135170.
 > ```
 > 
