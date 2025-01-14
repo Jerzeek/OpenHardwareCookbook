@@ -29,11 +29,16 @@
         </div>
         <div class="directions">
             <h2>Directions</h2>
-            <ol>
-                {% for instruction in recipe.instructions %}
-                <li>{{ instruction }}</li>
-                {% endfor %}
-            </ol>
+            {% for section in recipe.instruction_sections %}
+                {% if section.title %}
+                    <h3>{{ section.title }}</h3>
+                {% endif %}
+                <ol>
+                    {% for step in section.steps %}
+                        <li>{{ step }}</li>
+                    {% endfor %}
+                </ol>
+            {% endfor %}
         </div>
     </div>
 </section>

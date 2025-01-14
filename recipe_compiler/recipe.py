@@ -8,6 +8,11 @@ class IngredientSection:
     items: List[str]
 
 @dataclass
+class InstructionSection:
+    title: Optional[str]
+    steps: List[str]
+
+@dataclass
 class Recipe:
     name: str
     residence: str
@@ -15,7 +20,7 @@ class Recipe:
     recipe_name: str
     quote: str
     ingredient_sections: List[IngredientSection]
-    instructions: List[str]
+    instruction_sections: List[InstructionSection]
 
     @property
     def slug(self) -> str:
