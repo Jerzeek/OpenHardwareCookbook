@@ -16,11 +16,16 @@
     <div class="lists">
         <div class="ingredients">
             <h2>Ingredients</h2>
-            <ul>
-                {% for ingredient in recipe.ingredients %}
-                <li>{{ ingredient }}</li>
-                {% endfor %}
-            </ul>
+            {% for section in recipe.ingredient_sections %}
+                {% if section.title %}
+                    <h3>{{ section.title }}</h3>
+                {% endif %}
+                <ul>
+                    {% for ingredient in section.items %}
+                        <li>{{ ingredient }}</li>
+                    {% endfor %}
+                </ul>
+            {% endfor %}
         </div>
         <div class="directions">
             <h2>Directions</h2>

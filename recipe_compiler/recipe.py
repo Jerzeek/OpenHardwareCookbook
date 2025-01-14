@@ -1,8 +1,11 @@
 from dataclasses import dataclass
+from typing import List, Optional
 from recipe_compiler.recipe_category import RecipeCategory
 
-import frontmatter
-
+@dataclass
+class IngredientSection:
+    title: Optional[str]
+    items: List[str]
 
 @dataclass
 class Recipe:
@@ -11,8 +14,8 @@ class Recipe:
     category: RecipeCategory
     recipe_name: str
     quote: str
-    ingredients: list[str]
-    instructions: list[str]
+    ingredient_sections: List[IngredientSection]
+    instructions: List[str]
 
     @property
     def slug(self) -> str:
@@ -21,5 +24,4 @@ class Recipe:
         Returns:
             str: The recipe_name in kebab-case format
         """
-
         return self.recipe_name.lower().replace(" ", "-").replace("'", "").replace('"', "")
