@@ -400,6 +400,13 @@ section.recipe .content-section img {
     line-height: 1.6;
 }
 
+.section-note {
+    font-size: 0.9rem;
+    color: var(--neutral-60);
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
 section.recipe > h1 {
     font-weight: 500;
     font-size: 4rem;

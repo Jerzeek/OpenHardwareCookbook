@@ -11,6 +11,7 @@ class IngredientSection:
 class InstructionSection:
     title: Optional[str]
     steps: List[str]
+    note: Optional[str] = None
 
 @dataclass
 class ContentSection:

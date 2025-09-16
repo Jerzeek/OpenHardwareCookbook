@@ -40,6 +40,9 @@
                 {% if section.title %}
                     <h3>{{ section.title }}</h3>
                 {% endif %}
+                {% if section.note %}
+                    <p class="section-note"><em>{{ section.note | safe }}</em></p>
+                {% endif %}
                 <ol>
                     {% for step in section.steps %}
                         <li>{{ step | safe }}</li>

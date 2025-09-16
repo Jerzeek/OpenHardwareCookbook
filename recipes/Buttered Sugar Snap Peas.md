@@ -25,6 +25,7 @@ tags:
 4. Cook stirring occasionally until tender and crisp (about 3-4 minutes)
 
 ## Pictures
-one ![fish image](illustrations/fish.png)
-two ![fish image](../docs/illustrations/fish.png)
-three ![fish image](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/PNG_Test.png/500px-PNG_Test.png)
+one  
+![fish image](illustrations/test.jpeg) 
+![fish image](illustrations/test2.jpeg)
+three  

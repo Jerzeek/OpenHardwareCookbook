@@ -139,6 +139,14 @@ def get_instructions_structured(document: Document) -> TypingList[InstructionSec
                 current_section = InstructionSection(title=text, steps=[])
                 sections.append(current_section)
         
+        elif isinstance(node, Paragraph) and is_within_instructions and current_section is not None:
+            # Handle paragraph content within instruction sections (like notes, comments)
+            paragraph_text = extract_text_from_paragraph(node)
+            print(f"DEBUG: Found instruction paragraph: '{paragraph_text}'")
+            # Set as a note for the current section (only if it doesn't already have one)
+            if current_section.note is None:
+                current_section.note = paragraph_text
+            
         elif isinstance(node, List) and is_within_instructions and current_section is not None:
             print("DEBUG: Processing instruction list")
             for item in node.children:
