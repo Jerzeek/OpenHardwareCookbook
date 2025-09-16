@@ -28,14 +28,20 @@ def render_home_page(recipes: list[Recipe], env: Environment) -> str:
     """
 
     recipes_by_category = {}
+    all_tags = set()
+    
     for recipe in recipes:
         if recipe.category.value in recipes_by_category.keys():
             recipes_by_category[recipe.category.value].append(recipe)
         else:
             recipes_by_category[recipe.category.value] = [recipe]
+        
+        # Collect all unique tags
+        all_tags.update(recipe.tags)
 
     return env.get_template("homepage.html").render(
-        recipes_by_category=recipes_by_category
+        recipes_by_category=recipes_by_category,
+        all_tags=sorted(list(all_tags))
     )
 
 

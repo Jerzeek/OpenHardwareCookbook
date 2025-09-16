@@ -296,6 +296,67 @@ section.table-of-contents {
     color: var(--neutral-80);
 }
 
+/* Tag Filters */
+.tag-filters {
+    text-align: center;
+    margin: 2rem 0;
+    padding: 1rem;
+}
+
+.tag-filters h2 {
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    max-width: 60rem;
+    margin: 0 auto;
+}
+
+.filter-btn {
+    background-color: var(--neutral-4);
+    border: 2px solid var(--neutral-20);
+    color: var(--text-primary);
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    text-transform: capitalize;
+}
+
+.filter-btn:hover {
+    background-color: var(--neutral-8);
+    border-color: var(--neutral-30);
+}
+
+.filter-btn.active {
+    background-color: var(--tomato);
+    color: var(--neutral-0);
+    border-color: var(--tomato);
+}
+
+/* Recipe Tags */
+.recipe-tags {
+    margin-top: 0.5rem;
+}
+
+.recipe-tags .tag {
+    display: inline-block;
+    background-color: var(--neutral-8);
+    color: var(--neutral-70);
+    padding: 0.2rem 0.5rem;
+    border-radius: 1rem;
+    font-size: 0.75rem;
+    margin-right: 0.3rem;
+    margin-bottom: 0.2rem;
+    text-transform: capitalize;
+}
+
 /* Recipe */
 
 section.recipe {

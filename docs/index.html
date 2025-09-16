@@ -67,6 +67,19 @@
         <a href="contribute">Contribute your recipe</a>
     </div>
 
+    <!-- Tag Filters -->
+    
+    <section class="tag-filters">
+        <h2>Filter by Tags</h2>
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-tag="all">All Recipes</button>
+            
+            <button class="filter-btn" data-tag="vegetarian">vegetarian</button>
+            
+        </div>
+    </section>
+    
+
     <!-- Table of Contents -->
     <section class="table-of-contents">
         <h2>Table of Contents</h2>
@@ -199,7 +212,7 @@
         </header>
         <div class="recipe-cards">
             
-            <div class="recipe-card">
+            <div class="recipe-card" data-tags="">
                 <h3>
                     <a href="nigerian-puff-puff">Nigerian Puff Puff</a>
                 </h3>
@@ -209,9 +222,10 @@
                     <span class="residence">Surrey, British Columbia</span>
                     <span class="quote">What do programmers do when they are hungry? They grab a byte!</span>
                 </div>
+                
             </div>
             
-            <div class="recipe-card">
+            <div class="recipe-card" data-tags="vegetarian">
                 <h3>
                     <a href="buttered-sugar-snap-peas">Buttered Sugar Snap Peas</a>
                 </h3>
@@ -221,6 +235,13 @@
                     <span class="residence">Portland, OR, USA</span>
                     <span class="quote">Make this quick snack in a snap to ap-peas-e your code base.</span>
                 </div>
+                
+                <div class="recipe-tags">
+                    
+                    <span class="tag">vegetarian</span>
+                    
+                </div>
+                
             </div>
             
         </div>
@@ -238,7 +259,7 @@
         </header>
         <div class="recipe-cards">
             
-            <div class="recipe-card">
+            <div class="recipe-card" data-tags="">
                 <h3>
                     <a href="fundamental-lentil-soup">Fundamental Lentil Soup</a>
                 </h3>
@@ -248,9 +269,10 @@
                     <span class="residence">Duvall, WA, USA</span>
                     <span class="quote">It&#39;s important to nail the fundamentals in any project -- even dinner.</span>
                 </div>
+                
             </div>
             
-            <div class="recipe-card">
+            <div class="recipe-card" data-tags="">
                 <h3>
                     <a href="veggie-pyzza">Veggie Pyzza</a>
                 </h3>
@@ -260,9 +282,10 @@
                     <span class="residence">Vancouver, BC, Canada</span>
                     <span class="quote">A dev&#39;s classic debugging meal</span>
                 </div>
+                
             </div>
             
-            <div class="recipe-card">
+            <div class="recipe-card" data-tags="">
                 <h3>
                     <a href="creamy-open-sauce-gnocchi">Creamy Open Sauce Gnocchi</a>
                 </h3>
@@ -272,9 +295,10 @@
                     <span class="residence">Munich, Germany</span>
                     <span class="quote">You will not want to fork any other gnocchi after trying these.</span>
                 </div>
+                
             </div>
             
-            <div class="recipe-card">
+            <div class="recipe-card" data-tags="">
                 <h3>
                     <a href="twice-baked-stuffed-squash-commit">Twice-baked Stuffed Squash Commit</a>
                 </h3>
@@ -285,9 +309,10 @@
                     <span class="quote">In this recipe we make several changes to the scooped out insides of a roasted squash before committing them all back to main. We&#39;ll add a few features as part of this squash commit, including hot italian sausage, garlicky sauteed greens, and a crunchy, cheesy breadcrumb topping.
 You can fork this recipe and change the features in a number of ways. The type of squash used is flexible; I&#39;ve used butternut, acorn, and delicata. The greens used are also flexible; my main GOTO is lacinto kale but you can use spinach or mustard greens (not bagged baby spinach!). If your PM has you on an unreasonable deadline and you just need to ship it, feel free to skip making your own breakcrumb topping and use panko or even crushed up croutons! Note that you will need a 12&#34; skillet with a lid for this recipe. Makes 2-4 servings depending on your appetite!</span>
                 </div>
+                
             </div>
             
-            <div class="recipe-card">
+            <div class="recipe-card" data-tags="">
                 <h3>
                     <a href="cream-of-mushroom-soup">Cream of Mushroom Soup</a>
                 </h3>
@@ -297,9 +322,10 @@ You can fork this recipe and change the features in a number of ways. The type o
                     <span class="residence">Portland, OR, USA</span>
                     <span class="quote">Holy moly, this is amazing and will make you never go back to any canned soup.</span>
                 </div>
+                
             </div>
             
-            <div class="recipe-card">
+            <div class="recipe-card" data-tags="">
                 <h3>
                     <a href="starch-menu-mashed-potatoes">&#34;Starch Menu&#34; Mashed Potatoes</a>
                 </h3>
@@ -309,6 +335,7 @@ You can fork this recipe and change the features in a number of ways. The type o
                     <span class="residence">Brooklyn, NY, USA</span>
                     <span class="quote">Buttery smooth yet simple to craft, like any good UI animation.</span>
                 </div>
+                
             </div>
             
         </div>
@@ -326,7 +353,7 @@ You can fork this recipe and change the features in a number of ways. The type o
         </header>
         <div class="recipe-cards">
             
-            <div class="recipe-card">
+            <div class="recipe-card" data-tags="">
                 <h3>
                     <a href="pie-shell-script">Pie Shell Script</a>
                 </h3>
@@ -336,9 +363,10 @@ You can fork this recipe and change the features in a number of ways. The type o
                     <span class="residence">Seattle, WA, USA</span>
                     <span class="quote">The perfect shell is as important for pie as it is for code.</span>
                 </div>
+                
             </div>
             
-            <div class="recipe-card">
+            <div class="recipe-card" data-tags="vegetarian">
                 <h3>
                     <a href="cottage-cheese-lemon-bake">Cottage Cheese Lemon Bake</a>
                 </h3>
@@ -348,9 +376,16 @@ You can fork this recipe and change the features in a number of ways. The type o
                     <span class="residence">Rochester, MN</span>
                     <span class="quote">if HighProtein and LowCalorie == True: print(&#39;Hello healthy dessert&#39;)</span>
                 </div>
+                
+                <div class="recipe-tags">
+                    
+                    <span class="tag">vegetarian</span>
+                    
+                </div>
+                
             </div>
             
-            <div class="recipe-card">
+            <div class="recipe-card" data-tags="">
                 <h3>
                     <a href="raspberry-pi(e)">Raspberry Pi(e)</a>
                 </h3>
@@ -360,6 +395,7 @@ You can fork this recipe and change the features in a number of ways. The type o
                     <span class="residence">Edmonton, Canada</span>
                     <span class="quote">Of course you were expecting this recipe.</span>
                 </div>
+                
             </div>
             
         </div>
@@ -379,6 +415,34 @@ You can fork this recipe and change the features in a number of ways. The type o
             
         </div>
     </section>
+    <script>
+        // Tag filtering functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const recipeCards = document.querySelectorAll('.recipe-card');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    const selectedTag = this.getAttribute('data-tag');
+                    
+                    recipeCards.forEach(card => {
+                        const cardTags = card.getAttribute('data-tags');
+                        
+                        if (selectedTag === 'all' || (cardTags && cardTags.includes(selectedTag))) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
