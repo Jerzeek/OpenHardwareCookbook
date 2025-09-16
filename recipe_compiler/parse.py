@@ -4,14 +4,20 @@ from recipe_compiler.recipe_category import RecipeCategory
 from typing import List as TypingList
 import marko
 import frontmatter
-from marko.inline import RawText
+from marko.inline import RawText, Image
 
 def extract_text_from_paragraph(paragraph: Paragraph) -> str:
-    """Extract text from a paragraph node"""
+    """Extract text from a paragraph node, preserving images as HTML"""
     text = ""
     for child in paragraph.children:
         if isinstance(child, RawText):
             text += child.children
+        elif isinstance(child, Image):
+            # Extract alt text from child nodes
+            alt_text = ""
+            if child.children:
+                alt_text = child.children
+            text += f'<img src="{child.dest}" alt="{alt_text}" />'
         else:
             text += str(child)
     return text.strip()

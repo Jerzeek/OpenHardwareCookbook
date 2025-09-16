@@ -12,7 +12,7 @@
         {% if recipe.name %} Submitted by {{ recipe.name }} {% endif %} {% if
         recipe.residence %} from {{ recipe.residence }} {% endif %}
     </div>
-    <blockquote>{{ recipe.quote }}</blockquote>
+    <blockquote>{{ recipe.quote | safe }}</blockquote>
     {% if recipe.tags %}
     <div class="tags">
         {% for tag in recipe.tags %}
@@ -29,7 +29,7 @@
                 {% endif %}
                 <ul>
                     {% for ingredient in section.items %}
-                        <li>{{ ingredient }}</li>
+                        <li>{{ ingredient | safe }}</li>
                     {% endfor %}
                 </ul>
             {% endfor %}
@@ -42,7 +42,7 @@
                 {% endif %}
                 <ol>
                     {% for step in section.steps %}
-                        <li>{{ step }}</li>
+                        <li>{{ step | safe }}</li>
                     {% endfor %}
                 </ol>
             {% endfor %}
