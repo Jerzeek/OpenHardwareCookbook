@@ -13,6 +13,13 @@
         recipe.residence %} from {{ recipe.residence }} {% endif %}
     </div>
     <blockquote>{{ recipe.quote }}</blockquote>
+    {% if recipe.tags %}
+    <div class="tags">
+        {% for tag in recipe.tags %}
+            <span class="tag">{{ tag }}</span>
+        {% endfor %}
+    </div>
+    {% endif %}
     <div class="lists">
         <div class="ingredients">
             <h2>Ingredients</h2>

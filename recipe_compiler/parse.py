@@ -177,4 +177,5 @@ def parse_to_recipe(content: str) -> Recipe:
         quote=quote,
         ingredient_sections=ingredient_sections,
         instruction_sections=instruction_sections,
+        tags=recipe_metadata.get("tags", []),
     )

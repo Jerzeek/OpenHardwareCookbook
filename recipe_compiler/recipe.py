@@ -21,6 +21,7 @@ class Recipe:
     quote: str
     ingredient_sections: List[IngredientSection]
     instruction_sections: List[InstructionSection]
+    tags: List[str]
 
     @property
     def slug(self) -> str:

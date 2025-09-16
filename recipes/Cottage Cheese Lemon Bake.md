@@ -2,6 +2,8 @@
 name: Tastan Kulmeshkenov
 residence: Rochester, MN
 category: dessert
+tags:
+  - vegetarian
 ---
 
 # Cottage Cheese Lemon Bake

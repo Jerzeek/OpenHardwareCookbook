@@ -2,6 +2,8 @@
 name: Ron Copeland
 residence: Portland, OR, USA
 category: appetizer
+tags:
+  - vegetarian
 ---
 
 # Buttered Sugar Snap Peas

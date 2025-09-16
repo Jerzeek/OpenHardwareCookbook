@@ -331,6 +331,22 @@ section.recipe > .credit {
     margin-bottom: 2rem;
 }
 
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.tag {
+    background: var(--green-onion);
+    color: var(--neutral-0);
+    padding: 0.3rem 0.6rem;
+    border-radius: 1rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
 .recipe > .lists {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30ch, 1fr));
