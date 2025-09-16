@@ -24,6 +24,7 @@ tags:
 3. Add snap peas to skillet along with salt and pepper
 4. Cook stirring occasionally until tender and crisp (about 3-4 minutes)
 
-![fish image](illustrations/fish.png)
-![fish image](../docs/illustrations/fish.png)
-![fish image](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/PNG_Test.png/500px-PNG_Test.png)
+## Pictures
+one ![fish image](illustrations/fish.png)
+two ![fish image](../docs/illustrations/fish.png)
+three ![fish image](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/PNG_Test.png/500px-PNG_Test.png)
