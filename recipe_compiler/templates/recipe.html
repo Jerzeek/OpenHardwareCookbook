@@ -48,5 +48,14 @@
             {% endfor %}
         </div>
     </div>
+    
+    {% if recipe.content_sections %}
+        {% for section in recipe.content_sections %}
+            <div class="content-section">
+                <h2>{{ section.title }}</h2>
+                <div class="content">{{ section.content | safe }}</div>
+            </div>
+        {% endfor %}
+    {% endif %}
 </section>
 {% endblock content %}

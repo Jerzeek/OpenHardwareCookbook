@@ -1,10 +1,10 @@
 from marko.block import Document, Heading, List, Quote, ListItem, Paragraph
-from recipe_compiler.recipe import Recipe, IngredientSection, InstructionSection
+from recipe_compiler.recipe import Recipe, IngredientSection, InstructionSection, ContentSection
 from recipe_compiler.recipe_category import RecipeCategory
 from typing import List as TypingList
 import marko
 import frontmatter
-from marko.inline import RawText, Image
+from marko.inline import RawText, Image, LineBreak
 
 def extract_text_from_paragraph(paragraph: Paragraph) -> str:
     """Extract text from a paragraph node, preserving images as HTML"""
@@ -16,10 +16,20 @@ def extract_text_from_paragraph(paragraph: Paragraph) -> str:
             # Extract alt text from child nodes
             alt_text = ""
             if child.children:
-                alt_text = child.children
+                # Handle the alt text properly by extracting string content
+                alt_text = str(child.children)
             text += f'<img src="{child.dest}" alt="{alt_text}" />'
+        elif isinstance(child, LineBreak):
+            text += "<br>"
         else:
-            text += str(child)
+            # Handle other inline elements by converting to string
+            child_str = str(child)
+            # Clean up unwanted markup representations
+            if not child_str.startswith('<') or 'children=' in child_str:
+                # This looks like a raw representation, try to extract meaningful content
+                text += ""  # Skip problematic representations
+            else:
+                text += child_str
     return text.strip()
 
 def get_ingredients_structured(document: Document) -> TypingList[IngredientSection]:
@@ -153,6 +163,55 @@ def get_instructions_structured(document: Document) -> TypingList[InstructionSec
     
     return sections
 
+def get_content_sections(document: Document) -> TypingList[ContentSection]:
+    """Returns additional content sections from the recipe document (beyond ingredients and directions)"""
+    print("\nDEBUG: Starting content section parsing...")
+    sections = []
+    current_section = None
+    current_content = ""
+    skip_sections = {"ingredients", "directions", "instructions"}
+    
+    for node in document.children:
+        if isinstance(node, Heading) and node.level <= 2:
+            # If we were building a section, save it
+            if current_section is not None and current_content.strip():
+                sections.append(ContentSection(title=current_section, content=current_content.strip()))
+                current_content = ""
+            
+            # Start new section if it's not one we skip
+            text = extract_text_from_paragraph(node)
+            if text.lower() not in skip_sections and node.level == 2:
+                print(f"DEBUG: Found content section: {text}")
+                current_section = text
+                current_content = ""
+            else:
+                current_section = None
+        
+        elif current_section is not None:
+            # Add content to current section
+            if isinstance(node, Paragraph):
+                content = extract_text_from_paragraph(node)
+                current_content += content + "\n"
+                print(f"DEBUG: Added content: {content}")
+            elif isinstance(node, List):
+                # Handle lists in content sections
+                for item in node.children:
+                    if isinstance(item, ListItem):
+                        if item.children and isinstance(item.children[0], Paragraph):
+                            item_text = extract_text_from_paragraph(item.children[0])
+                            current_content += f"- {item_text}\n"
+    
+    # Don't forget the last section
+    if current_section is not None and current_content.strip():
+        sections.append(ContentSection(title=current_section, content=current_content.strip()))
+    
+    print(f"\nDEBUG: Found {len(sections)} content sections")
+    for section in sections:
+        print(f"Section title: {section.title}")
+        print(f"Content: {section.content[:100]}...")
+    
+    return sections
+
 def parse_to_recipe(content: str) -> Recipe:
     """Parse a Markdown formatted string to a Recipe object"""
     print("\nParsing recipe...")
@@ -164,6 +223,7 @@ def parse_to_recipe(content: str) -> Recipe:
     quote = get_quote(document)
     ingredient_sections = get_ingredients_structured(document)
     instruction_sections = get_instructions_structured(document)
+    content_sections = get_content_sections(document)
 
     print(f"\nRecipe name: {recipe_name}")
     print("\nIngredient sections:")
@@ -183,5 +243,6 @@ def parse_to_recipe(content: str) -> Recipe:
         quote=quote,
         ingredient_sections=ingredient_sections,
         instruction_sections=instruction_sections,
+        content_sections=content_sections,
         tags=recipe_metadata.get("tags", []),
     )

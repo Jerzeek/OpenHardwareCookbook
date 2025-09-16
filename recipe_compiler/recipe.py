@@ -13,6 +13,11 @@ class InstructionSection:
     steps: List[str]
 
 @dataclass
+class ContentSection:
+    title: str
+    content: str
+
+@dataclass
 class Recipe:
     name: str
     residence: str
@@ -21,6 +26,7 @@ class Recipe:
     quote: str
     ingredient_sections: List[IngredientSection]
     instruction_sections: List[InstructionSection]
+    content_sections: List[ContentSection]
     tags: List[str]
 
     @property
