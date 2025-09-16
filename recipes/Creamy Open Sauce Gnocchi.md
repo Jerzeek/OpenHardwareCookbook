@@ -2,6 +2,8 @@
 name: Sebastian Di Luzio
 residence: Munich, Germany
 category: entree
+tags:
+  - 3D printing
 ---
 
 # Creamy Open Sauce Gnocchi

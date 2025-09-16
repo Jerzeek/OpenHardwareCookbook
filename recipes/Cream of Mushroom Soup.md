@@ -2,6 +2,8 @@
 name: Britt Gresham
 residence: Portland, OR, USA
 category: Entree
+tags:
+  - 3D printing
 ---
 
 # Cream of Mushroom Soup
