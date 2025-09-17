@@ -29,6 +29,7 @@ class Recipe:
     instruction_sections: List[InstructionSection]
     content_sections: List[ContentSection]
     tags: List[str]
+    image: Optional[str] = None
 
     @property
     def slug(self) -> str:

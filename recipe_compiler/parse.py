@@ -253,4 +253,5 @@ def parse_to_recipe(content: str) -> Recipe:
         instruction_sections=instruction_sections,
         content_sections=content_sections,
         tags=recipe_metadata.get("tags", []),
+        image=recipe_metadata.get("image"),
     )
