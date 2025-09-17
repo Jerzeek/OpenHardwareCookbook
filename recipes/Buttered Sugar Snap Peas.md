@@ -4,6 +4,7 @@ residence: Portland, OR, USA
 category: 3D printing
 tags:
   - new
+image: illustrations/test2.jpeg
 ---
 
 # Buttered Sugar Snap Peas

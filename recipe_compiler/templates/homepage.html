@@ -140,11 +140,9 @@
         <div class="recipe-cards">
             {% for recipe in recipes_by_category["3d printing"]%}
             <div class="recipe-card" data-tags="{{ recipe.tags|join(',') }}">
-                {% if recipe.image %}
                 <div class="recipe-thumb">
-                    <img src="{{ recipe.image }}" alt="{{ recipe.recipe_name }}" />
+                    <img src="{{ recipe.image or 'illustrations/no-image.jpg' }}" alt="{{ recipe.recipe_name }}" />
                 </div>
-                {% endif %}
                 <h3>
                     <a href="{{ recipe.slug }}">{{ recipe.recipe_name }}</a>
                 </h3>
@@ -179,11 +177,9 @@
         <div class="recipe-cards">
             {% for recipe in recipes_by_category["programming"]%}
             <div class="recipe-card" data-tags="{{ recipe.tags|join(',') }}">
-                {% if recipe.image %}
                 <div class="recipe-thumb">
-                    <img src="{{ recipe.image }}" alt="{{ recipe.recipe_name }}" />
+                    <img src="{{ recipe.image or 'illustrations/no-image.jpg' }}" alt="{{ recipe.recipe_name }}" />
                 </div>
-                {% endif %}
                 <h3>
                     <a href="{{ recipe.slug }}">{{ recipe.recipe_name }}</a>
                 </h3>
@@ -218,11 +214,9 @@
         <div class="recipe-cards">
             {% for recipe in recipes_by_category["plastic recycling"]%}
             <div class="recipe-card" data-tags="{{ recipe.tags|join(',') }}">
-                {% if recipe.image %}
                 <div class="recipe-thumb">
-                    <img src="{{ recipe.image }}" alt="{{ recipe.recipe_name }}" />
+                    <img src="{{ recipe.image or 'illustrations/no-image.jpg' }}" alt="{{ recipe.recipe_name }}" />
                 </div>
-                {% endif %}
                 <h3>
                     <a href="{{ recipe.slug }}">{{ recipe.recipe_name }}</a>
                 </h3>
@@ -257,11 +251,9 @@
         <div class="recipe-cards">
             {% for recipe in recipes_by_category["other"]%}
             <div class="recipe-card" data-tags="{{ recipe.tags|join(',') }}">
-                {% if recipe.image %}
                 <div class="recipe-thumb">
-                    <img src="{{ recipe.image }}" alt="{{ recipe.recipe_name }}" />
+                    <img src="{{ recipe.image or 'illustrations/no-image.jpg' }}" alt="{{ recipe.recipe_name }}" />
                 </div>
-                {% endif %}
                 <h3>
                     <a href="{{ recipe.slug }}">{{ recipe.recipe_name }}</a>
                 </h3>
