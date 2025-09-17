@@ -1,7 +1,7 @@
 ---
 name: Norman Lorrain (credit to my late mom, Thérèse)
 residence: Edmonton, Canada
-category: dessert
+category: Plastic recycling
 ---
 
 # Raspberry Pi(e)

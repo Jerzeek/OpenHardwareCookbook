@@ -1,7 +1,7 @@
 {% extends "index.html" %} {% block content %}
 <body>
     <header>
-        <h1><strong>Open Source</strong> Cookbook</h1>
+        <h1><strong>Open Hardware</strong> Cookbook</h1>
         <img
             src="illustrations/bowl-spice.png"
             alt="Illustration of a bowl of food."
@@ -10,38 +10,19 @@
     <section class="introduction" id="introduction">
         <h2>Introduction</h2>
         <p>
-            Food recipes, just like software code, require testing. In the
-            culinary world, recipe testers play an essential role in the
-            creation of a cookbook by making sure that what the chef/author
-            describes can be implemented by other people and that the recipes
-            work as described.
+            Recipes are more than instructions for cooking—they are a way of sharing knowledge, tradition, and technique. In the same way, hardware designs are more than schematics or parts lists—they are distilled experience, tested processes, and creative solutions waiting to be remixed by others.
         </p>
         <p>
-            The similarities between food and code also work the other way. We
-            call code that is difficult to read spaghetti code. We are
-            encouraged to eat our own code, which means using it ourselves as a
-            way to test it. Code that doesn't work is half-baked. A sample code
-            fragment is called a recipe and collections of coding recipes are
-            known as cookbooks, like The JavaScript Cookbook by Shelly Powers
-            and The C# Cookbook by Jay Hilyard.
+            The kitchen and the workshop have more in common than one might think. A breadboard is not far from a cutting board: both are work surfaces where ideas are tested, adjusted, and sometimes fail spectacularly before turning into something nourishing. A poorly documented circuit is as frustrating as a recipe that skips crucial steps (“bake until done”), and just as with food, the best hardware designs are those that others can successfully reproduce.
         </p>
         <p>
-            Open source software has a particular indebtedness to the food
-            world. As with food recipes, having lots of people review your code
-            only makes it stronger and more reliable. This is the premise of
-            Linus's Law, which promotes the idea that a key benefit of open
-            source over closed source software is that it gets more eyes and is
-            more likely to get seen by those who can find and resolve bugs in
-            the codebase.
+            In the software world, we already speak of “cookbooks” filled with code snippets and patterns. Hardware deserves the same treatment. Open hardware thrives when designs are shared, adapted, and improved upon. Like a potluck dinner, each contributor brings their own flavor to the table—be it a clever sensor circuit, a robust motor driver, or a playful lighting effect. The more people who build, test, and modify these recipes, the stronger and tastier the collective knowledge becomes.
         </p>
         <p>
-            <strong>
-                In the tradition of open source, the authors of the chapters in
-                this cookbook are giving back to the community by sharing
-                favorite recipes - free, online, and downloadable. Enjoy
-                appetizers, entrees, and desserts from around the world,
-                courtesy of our global developer community!
-            </strong>
+            This Open Hardware Cookbook is a collection of such recipes. Some are simple appetizers—getting started with LEDs or sensors. Others are hearty mains—complete systems that drive motion, light, or interaction. And a few are sweet experiments—desserts to spark imagination and play. All of them are meant to be picked up, tested, shared, and remixed.
+        </p>
+        <p>
+            So, sharpen your soldering iron, gather your ingredients, and join the community at the workbench. The joy of open hardware is not only in making things work but in making them work together.
         </p>
     </section>
 
@@ -53,18 +34,7 @@
         <a href="contribute">Contribute your recipe</a>
     </div>
 
-    <!-- Tag Filters -->
-    {% if all_tags %}
-    <section class="tag-filters">
-        <h2>Filter by Tags</h2>
-        <div class="filter-buttons">
-            <button class="filter-btn active" data-tag="all">All Recipes</button>
-            {% for tag in all_tags %}
-            <button class="filter-btn" data-tag="{{ tag }}">{{ tag }}</button>
-            {% endfor %}
-        </div>
-    </section>
-    {% endif %}
+
 
     <!-- Table of Contents -->
     <section class="table-of-contents">
@@ -81,9 +51,9 @@
                 <div class="chapter">
                     <span class="chapter-number">01</span>
                     <div class="chapter-description">
-                        <h3><a href="#appetizers">Appetizers</a></h3>
+                        <h3><a href="#3Dprinting">3D Printing</a></h3>
                         <ol>
-                            {% for recipe in recipes_by_category["appetizer"]%}
+                            {% for recipe in recipes_by_category["3D printing"] %}
                             <li>
                                 <a href="{{ recipe.slug }}"
                                     >{{ recipe.recipe_name }}</a
@@ -96,9 +66,9 @@
                 <div class="chapter">
                     <span class="chapter-number">02</span>
                     <div class="chapter-description">
-                        <h3><a href="#entrees">Entrees</a></h3>
+                        <h3><a href="#Programming">Programming</a></h3>
                         <ol>
-                            {% for recipe in recipes_by_category["entree"]%}
+                            {% for recipe in recipes_by_category["Programming"] %}
                             <li>
                                 <a href="{{ recipe.slug }}"
                                     >{{ recipe.recipe_name }}</a
@@ -113,9 +83,9 @@
                 <div class="chapter">
                     <span class="chapter-number">03</span>
                     <div class="chapter-description">
-                        <h3><a href="#desserts">Desserts</a></h3>
+                        <h3><a href="#PlasticRecycling">Plastic Recycling</a></h3>
                         <ol>
-                            {% for recipe in recipes_by_category["dessert"]%}
+                            {% for recipe in recipes_by_category["PlasticRecycling"] %}
                             <li>
                                 <a href="{{ recipe.slug }}"
                                     >{{ recipe.recipe_name }}</a
@@ -144,18 +114,31 @@
         </div>
     </section>
 
-    <!-- Appetizers -->
-    <section class="appetizers" id="appetizers">
+    <!-- Tag Filters -->
+    {% if all_tags %}
+    <section class="tag-filters">
+        <h2>Filter by Tags</h2>
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-tag="all">All Recipes</button>
+            {% for tag in all_tags %}
+            <button class="filter-btn" data-tag="{{ tag }}">{{ tag }}</button>
+            {% endfor %}
+        </div>
+    </section>
+    {% endif %}
+    
+    <!-- 3Dprinting -->
+    <section class="3Dprinting" id="3Dprinting">
         <header>
             <img src="illustrations/appetizer.png" alt="" />
             <div>
                 <span>01</span>
-                <h2>Appetizers</h2>
+                <h2>3Dprinting</h2>
                 <p>Food to eat before other food!</p>
             </div>
         </header>
         <div class="recipe-cards">
-            {% for recipe in recipes_by_category["appetizer"]%}
+            {% for recipe in recipes_by_category["3Dprinting"]%}
             <div class="recipe-card" data-tags="{{ recipe.tags|join(',') }}">
                 <h3>
                     <a href="{{ recipe.slug }}">{{ recipe.recipe_name }}</a>
@@ -178,18 +161,18 @@
         </div>
     </section>
 
-    <!-- Entrees -->
-    <section class="entrees" id="entrees">
+    <!-- Programming -->
+    <section class="Programming" id="Programming">
         <header>
             <img src="illustrations/entree.png" alt="" />
             <div>
                 <span>02</span>
-                <h2>Entrees</h2>
+                <h2>Programming</h2>
                 <p>The main event</p>
             </div>
         </header>
         <div class="recipe-cards">
-            {% for recipe in recipes_by_category["entree"]%}
+            {% for recipe in recipes_by_category["Programming"]%}
             <div class="recipe-card" data-tags="{{ recipe.tags|join(',') }}">
                 <h3>
                     <a href="{{ recipe.slug }}">{{ recipe.recipe_name }}</a>
@@ -212,18 +195,18 @@
         </div>
     </section>
 
-    <!-- Desserts -->
-    <section class="desserts" id="desserts">
+    <!-- PlasticRecycling -->
+    <section class="PlasticRecycling" id="PlasticRecycling">
         <header>
             <img src="illustrations/dessert.png" alt="" />
             <div>
                 <span>03</span>
-                <h2>Desserts</h2>
+                <h2>PlasticRecycling</h2>
                 <p>Sweet treats</p>
             </div>
         </header>
         <div class="recipe-cards">
-            {% for recipe in recipes_by_category["dessert"]%}
+            {% for recipe in recipes_by_category["PlasticRecycling"]%}
             <div class="recipe-card" data-tags="{{ recipe.tags|join(',') }}">
                 <h3>
                     <a href="{{ recipe.slug }}">{{ recipe.recipe_name }}</a>

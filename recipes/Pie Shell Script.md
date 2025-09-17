@@ -1,7 +1,7 @@
 ---
 name: Thomas Eckert
 residence: Seattle, WA, USA
-category: dessert
+category: Plastic recycling
 ---
 
 # Pie Shell Script

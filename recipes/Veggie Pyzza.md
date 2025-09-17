@@ -1,7 +1,7 @@
 ---
 name: Laura G. Funderburk
 residence: Vancouver, BC, Canada
-category: entree
+category: Programming
 ---
 
 # Veggie Pyzza 

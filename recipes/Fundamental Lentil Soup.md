@@ -1,7 +1,7 @@
 ---
 name: Paul Campbell
 residence: Duvall, WA, USA
-category: entree
+category: 3D printing
 ---
 
 # Fundamental Lentil Soup

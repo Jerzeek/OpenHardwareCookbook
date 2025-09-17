@@ -1,7 +1,7 @@
 ---
 name: Iruoma Nwabuzor
 residence: Surrey, British Columbia
-category: appetizer
+category: 3D printing
 ---
 
 # Nigerian Puff Puff

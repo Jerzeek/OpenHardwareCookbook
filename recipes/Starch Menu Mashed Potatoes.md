@@ -1,7 +1,7 @@
 ---
 name: Josh Goldberg
 residence: Brooklyn, NY, USA
-category: entree
+category: Programming
 ---
 
 # "Starch Menu" Mashed Potatoes

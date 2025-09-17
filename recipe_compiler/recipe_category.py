@@ -2,7 +2,7 @@ from enum import Enum
 
 
 class RecipeCategory(Enum):
-    APPETIZER = "appetizer"
-    ENTREE = "entree"
-    DESSERT = "dessert"
+    PRINTING = "3d printing"
+    PROGRAMMING = "programming"
+    PLASTICRECYCLING = "plastic recycling"
     OTHER = "other"

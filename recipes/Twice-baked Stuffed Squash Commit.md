@@ -1,15 +1,15 @@
 ---
 name: TashasEv
 residence: Seattle, WA
-category: entree
+category: programming
 ---
 
 # Twice-baked Stuffed Squash Commit 
 
-> In this recipe we make several changes to the scooped out insides of a roasted squash before committing them all back to main. We'll add a few features as part of this squash commit, including hot italian sausage, garlicky sauteed greens, and a crunchy, cheesy breadcrumb topping.
->
->
-> You can fork this recipe and change the features in a number of ways. The type of squash used is flexible; I've used butternut, acorn, and delicata. The greens used are also flexible; my main GOTO is lacinto kale but you can use spinach or mustard greens (not bagged baby spinach!). If your PM has you on an unreasonable deadline and you just need to ship it, feel free to skip making your own breakcrumb topping and use panko or even crushed up croutons! Note that you will need a 12" skillet with a lid for this recipe. Makes 2-4 servings depending on your appetite!
+> In this recipe we make several changes to the scooped out insides of a roasted squash before committing them all back to main. We'll add a few features as part of this squash commit, including hot italian sausage, garlicky sauteed greens, and a crunchy, cheesy breadcrumb topping.  
+  
+
+You can fork this recipe and change the features in a number of ways. The type of squash used is flexible; I've used butternut, acorn, and delicata. The greens used are also flexible; my main GOTO is lacinto kale but you can use spinach or mustard greens (not bagged baby spinach!). If your PM has you on an unreasonable deadline and you just need to ship it, feel free to skip making your own breakcrumb topping and use panko or even crushed up croutons! Note that you will need a 12" skillet with a lid for this recipe. Makes 2-4 servings depending on your appetite!
 
 ## Ingredients
 
@@ -61,4 +61,4 @@ category: entree
 6. Cool briefly before serving. Enjoy!
 
 ### BONUS: Squash Commit Ravioli
-> This filling also makes excellent ravioli! If you're fortunate enough to have access to fresh sheet pasta, simply use this filling in place of a different filling recipe, adding 2 tsp - 1 Tbsp per ravioli depending on the desired size. Seal with an egg wash and another sheet of pasta and cut using a ravioli press, fluted dough cutter, or pizza cutter. Cook in a gallon of generously salted boiling water for 2-4 minutes and drain before adding to sauce; a brown butter sage sauce would be ideal here!
+This filling also makes excellent ravioli! If you're fortunate enough to have access to fresh sheet pasta, simply use this filling in place of a different filling recipe, adding 2 tsp - 1 Tbsp per ravioli depending on the desired size. Seal with an egg wash and another sheet of pasta and cut using a ravioli press, fluted dough cutter, or pizza cutter. Cook in a gallon of generously salted boiling water for 2-4 minutes and drain before adding to sauce; a brown butter sage sauce would be ideal here!

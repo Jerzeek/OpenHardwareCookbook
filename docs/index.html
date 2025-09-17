@@ -3,19 +3,19 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <base href="/OpenHardwareCookbook/" />
-        <link rel="stylesheet" href="/OpenHardwareCookbook/style.css" />
+        <base href="/" />
+        <link rel="stylesheet" href="/style.css" />
         <link
             rel="shortcut icon"
             href="illustrations/bowl-spice.png"
             type="image/x-icon"
         />
-        <title>Open Source Cookbook</title>
+        <title>Open Hardware Cookbook</title>
     </head>
     
 <body>
     <header>
-        <h1><strong>Open Source</strong> Cookbook</h1>
+        <h1><strong>Open Hardware</strong> Cookbook</h1>
         <img
             src="illustrations/bowl-spice.png"
             alt="Illustration of a bowl of food."
@@ -24,38 +24,19 @@
     <section class="introduction" id="introduction">
         <h2>Introduction</h2>
         <p>
-            Food recipes, just like software code, require testing. In the
-            culinary world, recipe testers play an essential role in the
-            creation of a cookbook by making sure that what the chef/author
-            describes can be implemented by other people and that the recipes
-            work as described.
+            Recipes are more than instructions for cooking—they are a way of sharing knowledge, tradition, and technique. In the same way, hardware designs are more than schematics or parts lists—they are distilled experience, tested processes, and creative solutions waiting to be remixed by others.
         </p>
         <p>
-            The similarities between food and code also work the other way. We
-            call code that is difficult to read spaghetti code. We are
-            encouraged to eat our own code, which means using it ourselves as a
-            way to test it. Code that doesn't work is half-baked. A sample code
-            fragment is called a recipe and collections of coding recipes are
-            known as cookbooks, like The JavaScript Cookbook by Shelly Powers
-            and The C# Cookbook by Jay Hilyard.
+            The kitchen and the workshop have more in common than one might think. A breadboard is not far from a cutting board: both are work surfaces where ideas are tested, adjusted, and sometimes fail spectacularly before turning into something nourishing. A poorly documented circuit is as frustrating as a recipe that skips crucial steps (“bake until done”), and just as with food, the best hardware designs are those that others can successfully reproduce.
         </p>
         <p>
-            Open source software has a particular indebtedness to the food
-            world. As with food recipes, having lots of people review your code
-            only makes it stronger and more reliable. This is the premise of
-            Linus's Law, which promotes the idea that a key benefit of open
-            source over closed source software is that it gets more eyes and is
-            more likely to get seen by those who can find and resolve bugs in
-            the codebase.
+            In the software world, we already speak of “cookbooks” filled with code snippets and patterns. Hardware deserves the same treatment. Open hardware thrives when designs are shared, adapted, and improved upon. Like a potluck dinner, each contributor brings their own flavor to the table—be it a clever sensor circuit, a robust motor driver, or a playful lighting effect. The more people who build, test, and modify these recipes, the stronger and tastier the collective knowledge becomes.
         </p>
         <p>
-            <strong>
-                In the tradition of open source, the authors of the chapters in
-                this cookbook are giving back to the community by sharing
-                favorite recipes - free, online, and downloadable. Enjoy
-                appetizers, entrees, and desserts from around the world,
-                courtesy of our global developer community!
-            </strong>
+            This Open Hardware Cookbook is a collection of such recipes. Some are simple appetizers—getting started with LEDs or sensors. Others are hearty mains—complete systems that drive motion, light, or interaction. And a few are sweet experiments—desserts to spark imagination and play. All of them are meant to be picked up, tested, shared, and remixed.
+        </p>
+        <p>
+            So, sharpen your soldering iron, gather your ingredients, and join the community at the workbench. The joy of open hardware is not only in making things work but in making them work together.
         </p>
     </section>
 
@@ -67,20 +48,7 @@
         <a href="contribute">Contribute your recipe</a>
     </div>
 
-    <!-- Tag Filters -->
-    
-    <section class="tag-filters">
-        <h2>Filter by Tags</h2>
-        <div class="filter-buttons">
-            <button class="filter-btn active" data-tag="all">All Recipes</button>
-            
-            <button class="filter-btn" data-tag="3D printing">3D printing</button>
-            
-            <button class="filter-btn" data-tag="vegetarian">vegetarian</button>
-            
-        </div>
-    </section>
-    
+
 
     <!-- Table of Contents -->
     <section class="table-of-contents">
@@ -97,20 +65,8 @@
                 <div class="chapter">
                     <span class="chapter-number">01</span>
                     <div class="chapter-description">
-                        <h3><a href="#appetizers">Appetizers</a></h3>
+                        <h3><a href="#3Dprinting">3D Printing</a></h3>
                         <ol>
-                            
-                            <li>
-                                <a href="nigerian-puff-puff"
-                                    >Nigerian Puff Puff</a
-                                >
-                            </li>
-                            
-                            <li>
-                                <a href="buttered-sugar-snap-peas"
-                                    >Buttered Sugar Snap Peas</a
-                                >
-                            </li>
                             
                         </ol>
                     </div>
@@ -118,44 +74,8 @@
                 <div class="chapter">
                     <span class="chapter-number">02</span>
                     <div class="chapter-description">
-                        <h3><a href="#entrees">Entrees</a></h3>
+                        <h3><a href="#Programming">Programming</a></h3>
                         <ol>
-                            
-                            <li>
-                                <a href="twice-baked-stuffed-squash-commit"
-                                    >Twice-baked Stuffed Squash Commit</a
-                                >
-                            </li>
-                            
-                            <li>
-                                <a href="starch-menu-mashed-potatoes"
-                                    >&#34;Starch Menu&#34; Mashed Potatoes</a
-                                >
-                            </li>
-                            
-                            <li>
-                                <a href="creamy-open-sauce-gnocchi"
-                                    >Creamy Open Sauce Gnocchi</a
-                                >
-                            </li>
-                            
-                            <li>
-                                <a href="veggie-pyzza"
-                                    >Veggie Pyzza</a
-                                >
-                            </li>
-                            
-                            <li>
-                                <a href="fundamental-lentil-soup"
-                                    >Fundamental Lentil Soup</a
-                                >
-                            </li>
-                            
-                            <li>
-                                <a href="cream-of-mushroom-soup"
-                                    >Cream of Mushroom Soup</a
-                                >
-                            </li>
                             
                         </ol>
                     </div>
@@ -165,26 +85,8 @@
                 <div class="chapter">
                     <span class="chapter-number">03</span>
                     <div class="chapter-description">
-                        <h3><a href="#desserts">Desserts</a></h3>
+                        <h3><a href="#PlasticRecycling">Plastic Recycling</a></h3>
                         <ol>
-                            
-                            <li>
-                                <a href="pie-shell-script"
-                                    >Pie Shell Script</a
-                                >
-                            </li>
-                            
-                            <li>
-                                <a href="raspberry-pi(e)"
-                                    >Raspberry Pi(e)</a
-                                >
-                            </li>
-                            
-                            <li>
-                                <a href="cottage-cheese-lemon-bake"
-                                    >Cottage Cheese Lemon Bake</a
-                                >
-                            </li>
                             
                         </ol>
                     </div>
@@ -202,215 +104,64 @@
         </div>
     </section>
 
-    <!-- Appetizers -->
-    <section class="appetizers" id="appetizers">
+    <!-- Tag Filters -->
+    
+    <section class="tag-filters">
+        <h2>Filter by Tags</h2>
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-tag="all">All Recipes</button>
+            
+            <button class="filter-btn" data-tag="advanced">advanced</button>
+            
+            <button class="filter-btn" data-tag="hardcore">hardcore</button>
+            
+            <button class="filter-btn" data-tag="new">new</button>
+            
+        </div>
+    </section>
+    
+    
+    <!-- 3Dprinting -->
+    <section class="3Dprinting" id="3Dprinting">
         <header>
             <img src="illustrations/appetizer.png" alt="" />
             <div>
                 <span>01</span>
-                <h2>Appetizers</h2>
+                <h2>3Dprinting</h2>
                 <p>Food to eat before other food!</p>
             </div>
         </header>
         <div class="recipe-cards">
             
-            <div class="recipe-card" data-tags="">
-                <h3>
-                    <a href="nigerian-puff-puff">Nigerian Puff Puff</a>
-                </h3>
-                <hr />
-                <div>
-                    <span class="name">Iruoma Nwabuzor</span>
-                    <span class="residence">Surrey, British Columbia</span>
-                    <span class="quote">What do programmers do when they are hungry? They grab a byte!</span>
-                </div>
-                
-            </div>
-            
-            <div class="recipe-card" data-tags="vegetarian">
-                <h3>
-                    <a href="buttered-sugar-snap-peas">Buttered Sugar Snap Peas</a>
-                </h3>
-                <hr />
-                <div>
-                    <span class="name">Ron Copeland</span>
-                    <span class="residence">Portland, OR, USA</span>
-                    <span class="quote">Make this quick snack in a snap to ap-peas-e your code base.</span>
-                </div>
-                
-                <div class="recipe-tags">
-                    
-                    <span class="tag">vegetarian</span>
-                    
-                </div>
-                
-            </div>
-            
         </div>
     </section>
 
-    <!-- Entrees -->
-    <section class="entrees" id="entrees">
+    <!-- Programming -->
+    <section class="Programming" id="Programming">
         <header>
             <img src="illustrations/entree.png" alt="" />
             <div>
                 <span>02</span>
-                <h2>Entrees</h2>
+                <h2>Programming</h2>
                 <p>The main event</p>
             </div>
         </header>
         <div class="recipe-cards">
             
-            <div class="recipe-card" data-tags="">
-                <h3>
-                    <a href="twice-baked-stuffed-squash-commit">Twice-baked Stuffed Squash Commit</a>
-                </h3>
-                <hr />
-                <div>
-                    <span class="name">TashasEv</span>
-                    <span class="residence">Seattle, WA</span>
-                    <span class="quote">In this recipe we make several changes to the scooped out insides of a roasted squash before committing them all back to main. We&#39;ll add a few features as part of this squash commit, including hot italian sausage, garlicky sauteed greens, and a crunchy, cheesy breadcrumb topping.
-You can fork this recipe and change the features in a number of ways. The type of squash used is flexible; I&#39;ve used butternut, acorn, and delicata. The greens used are also flexible; my main GOTO is lacinto kale but you can use spinach or mustard greens (not bagged baby spinach!). If your PM has you on an unreasonable deadline and you just need to ship it, feel free to skip making your own breakcrumb topping and use panko or even crushed up croutons! Note that you will need a 12&#34; skillet with a lid for this recipe. Makes 2-4 servings depending on your appetite!</span>
-                </div>
-                
-            </div>
-            
-            <div class="recipe-card" data-tags="">
-                <h3>
-                    <a href="starch-menu-mashed-potatoes">&#34;Starch Menu&#34; Mashed Potatoes</a>
-                </h3>
-                <hr />
-                <div>
-                    <span class="name">Josh Goldberg</span>
-                    <span class="residence">Brooklyn, NY, USA</span>
-                    <span class="quote">Buttery smooth yet simple to craft, like any good UI animation.</span>
-                </div>
-                
-            </div>
-            
-            <div class="recipe-card" data-tags="3D printing">
-                <h3>
-                    <a href="creamy-open-sauce-gnocchi">Creamy Open Sauce Gnocchi</a>
-                </h3>
-                <hr />
-                <div>
-                    <span class="name">Sebastian Di Luzio</span>
-                    <span class="residence">Munich, Germany</span>
-                    <span class="quote">You will not want to fork any other gnocchi after trying these.</span>
-                </div>
-                
-                <div class="recipe-tags">
-                    
-                    <span class="tag">3D printing</span>
-                    
-                </div>
-                
-            </div>
-            
-            <div class="recipe-card" data-tags="">
-                <h3>
-                    <a href="veggie-pyzza">Veggie Pyzza</a>
-                </h3>
-                <hr />
-                <div>
-                    <span class="name">Laura G. Funderburk</span>
-                    <span class="residence">Vancouver, BC, Canada</span>
-                    <span class="quote">A dev&#39;s classic debugging meal</span>
-                </div>
-                
-            </div>
-            
-            <div class="recipe-card" data-tags="">
-                <h3>
-                    <a href="fundamental-lentil-soup">Fundamental Lentil Soup</a>
-                </h3>
-                <hr />
-                <div>
-                    <span class="name">Paul Campbell</span>
-                    <span class="residence">Duvall, WA, USA</span>
-                    <span class="quote">It&#39;s important to nail the fundamentals in any project -- even dinner.</span>
-                </div>
-                
-            </div>
-            
-            <div class="recipe-card" data-tags="3D printing">
-                <h3>
-                    <a href="cream-of-mushroom-soup">Cream of Mushroom Soup</a>
-                </h3>
-                <hr />
-                <div>
-                    <span class="name">Britt Gresham</span>
-                    <span class="residence">Portland, OR, USA</span>
-                    <span class="quote">Holy moly, this is amazing and will make you never go back to any canned soup.</span>
-                </div>
-                
-                <div class="recipe-tags">
-                    
-                    <span class="tag">3D printing</span>
-                    
-                </div>
-                
-            </div>
-            
         </div>
     </section>
 
-    <!-- Desserts -->
-    <section class="desserts" id="desserts">
+    <!-- PlasticRecycling -->
+    <section class="PlasticRecycling" id="PlasticRecycling">
         <header>
             <img src="illustrations/dessert.png" alt="" />
             <div>
                 <span>03</span>
-                <h2>Desserts</h2>
+                <h2>PlasticRecycling</h2>
                 <p>Sweet treats</p>
             </div>
         </header>
         <div class="recipe-cards">
-            
-            <div class="recipe-card" data-tags="">
-                <h3>
-                    <a href="pie-shell-script">Pie Shell Script</a>
-                </h3>
-                <hr />
-                <div>
-                    <span class="name">Thomas Eckert</span>
-                    <span class="residence">Seattle, WA, USA</span>
-                    <span class="quote">The perfect shell is as important for pie as it is for code.</span>
-                </div>
-                
-            </div>
-            
-            <div class="recipe-card" data-tags="">
-                <h3>
-                    <a href="raspberry-pi(e)">Raspberry Pi(e)</a>
-                </h3>
-                <hr />
-                <div>
-                    <span class="name">Norman Lorrain (credit to my late mom, Thérèse)</span>
-                    <span class="residence">Edmonton, Canada</span>
-                    <span class="quote">Of course you were expecting this recipe.</span>
-                </div>
-                
-            </div>
-            
-            <div class="recipe-card" data-tags="vegetarian">
-                <h3>
-                    <a href="cottage-cheese-lemon-bake">Cottage Cheese Lemon Bake</a>
-                </h3>
-                <hr />
-                <div>
-                    <span class="name">Tastan Kulmeshkenov</span>
-                    <span class="residence">Rochester, MN</span>
-                    <span class="quote">if HighProtein and LowCalorie == True: print(&#39;Hello healthy dessert&#39;)</span>
-                </div>
-                
-                <div class="recipe-tags">
-                    
-                    <span class="tag">vegetarian</span>
-                    
-                </div>
-                
-            </div>
             
         </div>
     </section>

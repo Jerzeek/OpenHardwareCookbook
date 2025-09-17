@@ -1,9 +1,9 @@
 ---
 name: Ron Copeland
 residence: Portland, OR, USA
-category: appetizer
+category: 3D printing
 tags:
-  - vegetarian
+  - new
 ---
 
 # Buttered Sugar Snap Peas

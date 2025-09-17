@@ -1,9 +1,9 @@
 ---
 name: Tastan Kulmeshkenov
 residence: Rochester, MN
-category: dessert
+category: Plastic recycling
 tags:
-  - vegetarian
+  - new
 ---
 
 # Cottage Cheese Lemon Bake
