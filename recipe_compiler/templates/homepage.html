@@ -133,12 +133,12 @@
             <img src="illustrations/appetizer.png" alt="" />
             <div>
                 <span>01</span>
-                <h2>3Dprinting</h2>
+                <h2>3D printing</h2>
                 <p>Food to eat before other food!</p>
             </div>
         </header>
         <div class="recipe-cards">
-            {% for recipe in recipes_by_category["3Dprinting"]%}
+            {% for recipe in recipes_by_category["3d printing"]%}
             <div class="recipe-card" data-tags="{{ recipe.tags|join(',') }}">
                 <h3>
                     <a href="{{ recipe.slug }}">{{ recipe.recipe_name }}</a>
@@ -172,7 +172,7 @@
             </div>
         </header>
         <div class="recipe-cards">
-            {% for recipe in recipes_by_category["Programming"]%}
+            {% for recipe in recipes_by_category["programming"]%}
             <div class="recipe-card" data-tags="{{ recipe.tags|join(',') }}">
                 <h3>
                     <a href="{{ recipe.slug }}">{{ recipe.recipe_name }}</a>
@@ -201,12 +201,12 @@
             <img src="illustrations/dessert.png" alt="" />
             <div>
                 <span>03</span>
-                <h2>PlasticRecycling</h2>
+                <h2>Plastic Recycling</h2>
                 <p>Sweet treats</p>
             </div>
         </header>
         <div class="recipe-cards">
-            {% for recipe in recipes_by_category["PlasticRecycling"]%}
+            {% for recipe in recipes_by_category["plastic recycling"]%}
             <div class="recipe-card" data-tags="{{ recipe.tags|join(',') }}">
                 <h3>
                     <a href="{{ recipe.slug }}">{{ recipe.recipe_name }}</a>
