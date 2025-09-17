@@ -2,7 +2,7 @@
 name: TashasEv
 residence: Seattle, WA
 category: programming
-image: illustrations/appetizer.png
+image: illustrations/test.jpeg
 ---
 
 # Twice-baked Stuffed Squash Commit 
@@ -62,3 +62,10 @@ You can fork this recipe and change the features in a number of ways. The type o
 
 ### BONUS: Squash Commit Ravioli
 This filling also makes excellent ravioli! If you're fortunate enough to have access to fresh sheet pasta, simply use this filling in place of a different filling recipe, adding 2 tsp - 1 Tbsp per ravioli depending on the desired size. Seal with an egg wash and another sheet of pasta and cut using a ravioli press, fluted dough cutter, or pizza cutter. Cook in a gallon of generously salted boiling water for 2-4 minutes and drain before adding to sauce; a brown butter sage sauce would be ideal here!
+
+
+## Pictures
+one  
+![fish image](illustrations/test.jpeg) 
+![fish image](illustrations/test2.jpeg)
+three  

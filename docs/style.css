@@ -290,6 +290,25 @@ section.table-of-contents {
     flex-direction: column;
 }
 
+/* Recipe thumbnail: enforce 16:9 and crop overflow */
+.recipe-card .recipe-thumb {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow);
+    background: var(--neutral-2);
+    margin-bottom: 0.5rem;
+}
+
+.recipe-card .recipe-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
 .recipe-card .name,
 .recipe-card .residence {
     font-weight: 500;
